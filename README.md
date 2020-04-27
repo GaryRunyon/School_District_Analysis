@@ -15,7 +15,7 @@ Per the challenge:
 
 *** Recreate the district and school summary DataFrames.
 1) How is the district summary affected? - The district_summary_df is affected primaryily by changes in the "% Passing Math" (from 75 yo 74%), the "% Passing Reading" (from 86 to 85%) and the "% Overall Passing" columns (65 to 64%). The "Average Math Score dropped from 79.0 to 78.9 in the new analysis while the "Average Reading Score" stayed the same. This is due to the relatively small size of the 9th grade class at Thomas High School as compared to all other classes in all other (14) schools. At 4 grades per 15 schools, this would represent less than 1/60th of the data.  
-2) How is the school summary affected? - Similarly, the school_summary_df is affected most significantly by changes in the rows for Thomas High School, namely the "% Passing Math","% Passing Reading", and "% Overall Passing" columns. More specific changes are outlined below. 
+2) How is the school summary affected? - Similarly, the school_summary_df is affected most significantly by changes in the "% Passing Math","% Passing Reading", and "% Overall Passing" columns for Thomas High School. The Average Math Score dropped from 83.42 to 83.35, the Average Reading Score increased from 83.85 to 83.90, barely changing. Conversely, the % Passing Math dropped from 97.31 to 66.91%, the % Passing Reading from 97.31 to 69.66%, and % Overall Passing from 90.95 to 65.08%. This is because the NaN isn't included in the calculation of the mean score, as it is "Not A Number" but the lack of score DOES affect the number of students who pass or fail. 
 
 
 
