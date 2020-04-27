@@ -14,8 +14,8 @@ The amended data frame was then merged with the pre-existing frame and new summa
 Per the challenge: 
 
 *** Recreate the district and school summary DataFrames.
-1) How is the district summary affected? - The district_summary_df is affected only by changes in the "% Passing Math" (from 75 yo 74%), the "% Passing Reading" (from 86 to 85%) and the "% Overall Passing" columns (65 to 64%). This is due to the relative size of the 9th grade class at Thomas High School as compared to all other classes in all other (14) schools. 
-2) How is the school summary affected? - Similarly, the school_summary_df is affected only by changes in the rows for Thomas High School, namely the "% Passing Math","% Passing Reading", and "% Overall Passing" columns. More specific changes are outlined below. 
+1) How is the district summary affected? - The district_summary_df is affected primaryily by changes in the "% Passing Math" (from 75 yo 74%), the "% Passing Reading" (from 86 to 85%) and the "% Overall Passing" columns (65 to 64%). The "Average Math Score dropped from 79.0 to 78.9 in the new analysis while the "Average Reading Score" stayed the same. This is due to the relatively small size of the 9th grade class at Thomas High School as compared to all other classes in all other (14) schools. At 4 grades per 15 schools, this would represent less than 1/60th of the data.  
+2) How is the school summary affected? - Similarly, the school_summary_df is affected most significantly by changes in the rows for Thomas High School, namely the "% Passing Math","% Passing Reading", and "% Overall Passing" columns. More specific changes are outlined below. 
 
 
 
@@ -26,7 +26,7 @@ Per the challenge:
 
 *** Recalculate the scores by grade, scores by school spending, scores by school size, and scores by school type. How does replacing the ninth-grade scores affect the following?
 
-1) Math and Reading Scores by Grade - The average passing reading and math scores were not affected. The NaN isn't incorporated into mathematical calculations such as mean(), sum(), etc. It only affected the number of passing students because it is Not A Number but can populate cells where calculations using INT or FLOAT64 variables are being used. So, the NUMBER of passing students in the 9th grade changed but the AVERAGE PASSING GRADE did not change, as NaN is not counted as a value of zero. 
+1) Math and Reading Scores by Grade - The average passing reading and math scores OVERALL were barely affected because of the relatively small sample size constituted by the 9th grade class at Thomas High School. In the math and reading scores by grade charts, the value of NaN is present in the 9th grade column for the Thomas High School Row. The NaN value doesn't take down the average score in and of itself, because it is not counted as a zero. It does, however, change the percentage of students passing as that value is based on a fixed number of students. 
 
 2) Scores by School Spending - The Budget for Thomas High School falls in the "$630 to $644 per student" bin. Therefore, the new data only affected this bin in the spending_summary_df. In this bin, the "% Passing Math" dropped from 73.5 to 66.9%, the "% Passing Reading" dropped from 84.4 to 77.5%, and the "% Overall Passing" dropped from 62.9 to 56.4%. 
 
